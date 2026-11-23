@@ -1,0 +1,36 @@
+<svg width="1000" height="360" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="360" rx="16" fill="#0B1120" stroke="#1E293B"/>
+  <text x="48" y="52" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">
+    Shader Architecture: Raw GLSL Strings vs. Three.js Shading Language (TSL)
+  </text>
+  <text x="48" y="78" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">
+    Write a single typed TypeScript node graph and let WebGPURenderer target WGSL or WebGL2 GLSL at runtime.
+  </text>
+
+  <!-- Row 1: Legacy GLSL -->
+  <text x="48" y="136" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">
+    Legacy Approach (GLSL Strings + onBeforeCompile)
+  </text>
+  <rect x="48" y="152" width="250" height="44" rx="8" fill="#334155"/>
+  <text x="173" y="179" text-anchor="middle" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">Hand-written GLSL Strings</text>
+
+  <rect x="314" y="152" width="260" height="44" rx="8" fill="#475569"/>
+  <text x="444" y="179" text-anchor="middle" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">Fragile String Injection</text>
+
+  <text x="600" y="179" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="700">WebGL Only (No WGSL)</text>
+
+  <!-- Row 2: TSL + WebGPURenderer -->
+  <text x="48" y="242" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">
+    Modern TSL Pipeline (three/tsl + WebGPURenderer)
+  </text>
+  <rect x="48" y="258" width="250" height="44" rx="8" fill="#0284C7"/>
+  <text x="173" y="285" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Typed TS Node Graph</text>
+
+  <rect x="314" y="258" width="210" height="44" rx="8" fill="#059669"/>
+  <text x="419" y="285" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">WGSL (WebGPU)</text>
+
+  <rect x="540" y="258" width="210" height="44" rx="8" fill="#4F46E5"/>
+  <text x="645" y="285" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">GLSL (WebGL2 Fallback)</text>
+
+  <text x="772" y="285" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">1 Codebase, All Browsers</text>
+</svg>
